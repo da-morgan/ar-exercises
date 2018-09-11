@@ -9,5 +9,9 @@ puts "----------"
 
 @annual_rev =  Store.sum("annual_revenue")
 pp "Annual Revenue: #{@annual_rev}"
+
 @average_rev = @annual_rev/(Store.count)
-pp "Average Revenue #{@average_rev}"
+pp "Revenue per store: #{@average_rev}"
+
+@money_makers = Store.where("annual_revenue > 1000000")
+pp "There are #{@money_makers.count} big money makers ( > 1,000,000/year)"

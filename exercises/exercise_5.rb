@@ -7,4 +7,7 @@ require_relative './exercise_4'
 puts "Exercise 5"
 puts "----------"
 
-# Your code goes here ...
+@annual_rev =  Store.sum("annual_revenue")
+pp "Annual Revenue: #{@annual_rev}"
+@average_rev = @annual_rev/(Store.count)
+pp "Average Revenue #{@average_rev}"
